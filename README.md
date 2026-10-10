@@ -1,36 +1,33 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Hacker House Goa 2026 — Task 4
 
-## Getting Started
+A Next.js site that shows all my Hacker House Goa 2026 builds, ending with the
+final task (Task 04, the TigerGraph fraud agent), plus my other deployed projects.
+The UI is styled after [Frame in Goa](https://frame-my-goa-pic.vercel.app).
 
-First, run the development server:
+- `/` shows the four tasks and **More Builds**. Each card has a screenshot of the
+  project's home page and links to its GitHub repo and live site.
+- `/task-4` shows the final task: the pipeline, headline stats, and all 20
+  investigated cases from the agent's real output.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+| Task | Project | Code | Live |
+| --- | --- | --- | --- |
+| 01 | Frame in Goa | [repo](https://github.com/Saurabhyadav0/frame-my-goa-pic) | [live](https://frame-my-goa-pic.vercel.app) |
+| 02 | Voice RAG | [repo](https://github.com/Saurabhyadav0/hh_rag_project) | [live](https://hh-rag-project.fly.dev) |
+| 03 | Face → Chain | [repo](https://github.com/Saurabhyadav0/HHGOA_task3) | runs locally |
+| 04 | TigerGraph Fraud Agent | [repo](https://github.com/Saurabhyadav0/tigergraph-fraud-agent) | runs locally (needs TigerGraph Savanna) |
+
+## Where the content comes from
+
+- Project data: `src/lib/projects.ts`
+- Screenshots: `public/shots/`. Each one was captured from the project's live
+  home page. Task 03 was captured from a local run of its Flask web app.
+- Task 04 case data: `src/lib/task4-cases.json`, exported from the fraud agent's
+  `cases/*.json`.
+
+## Run
+
+```sh
+npm install
+npm run dev     # http://localhost:3000
+npm run build
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

@@ -1,0 +1,295 @@
+[
+ {
+  "id": "HHG-001",
+  "verdict": "fraud",
+  "probability": 0.92,
+  "pattern": "out_of_region_use",
+  "exposure": 77.07,
+  "actions": [
+   "BLOCK_CARD",
+   "CREATE_CASE"
+  ],
+  "sar": false,
+  "summary": "Assessed as out of region use at 92% confidence. Bank risk model scored this transaction 0.61 (an input, discounted per policy since high scores are often legitimate). Customer denied making the transaction. Case-memory prior adjustment: +0.20 from this card's own closed-case history. Exposure $77.07 across 1 transaction(s).",
+  "changed": "Assumed customer denial moved fraud_probability from 0.51 to 0.92, changing verdict from uncertain to fraud."
+ },
+ {
+  "id": "HHG-002",
+  "verdict": "fraud",
+  "probability": 0.9,
+  "pattern": "card_not_present_fraud",
+  "exposure": 292.36,
+  "actions": [
+   "BLOCK_CARD",
+   "CREATE_CASE"
+  ],
+  "sar": false,
+  "summary": "Assessed as card not present fraud at 90% confidence. Bank risk model scored this transaction 0.79 (an input, discounted per policy since high scores are often legitimate). Amount is a 10.4-sigma outlier vs. this customer's history. Case-memory prior adjustment: +0.20 from this card's own closed-case history. Exposure $292.36 across 1 transaction(s).",
+  "changed": "nothing"
+ },
+ {
+  "id": "HHG-003",
+  "verdict": "fraud",
+  "probability": 0.75,
+  "pattern": "out_of_region_use",
+  "exposure": 49.0,
+  "actions": [
+   "BLOCK_CARD",
+   "CREATE_CASE"
+  ],
+  "sar": false,
+  "summary": "Assessed as out of region use at 75% confidence. Customer proactively reported the transaction: \"Customer C08623 message: 'I never made this $49.00 purchase. Please check my card.' Refers to 3530164.\". Case-memory prior adjustment: +0.20 from this card's own closed-case history. No fresh pattern signal fired; classified from this card's historical pattern (out_of_region_use). Exposure $49.00 across 1 transaction(s).",
+  "changed": "nothing"
+ },
+ {
+  "id": "HHG-004",
+  "verdict": "fraud",
+  "probability": 0.98,
+  "pattern": "card_not_present_new_device",
+  "exposure": 128.33,
+  "actions": [
+   "BLOCK_CARD",
+   "CREATE_CASE",
+   "FILE_REPORT",
+   "MONITOR_CONNECTED_CARDS"
+  ],
+  "sar": true,
+  "summary": "Assessed as card not present new device at 98% confidence. Customer proactively reported the transaction: \"Customer C08106 message: 'I never made this $128.33 purchase. Please check my card.' Refers to 3583227.\". Amount is a 3.4-sigma outlier vs. this customer's history; 8 transactions on this card within 48 hours; from a device profile marked New for this account. 4 other card(s) share this transaction's device profile. Exposure $128.33 across 1 transaction(s).",
+  "changed": "nothing"
+ },
+ {
+  "id": "HHG-005",
+  "verdict": "legitimate",
+  "probability": 0.05,
+  "pattern": "none",
+  "exposure": 0.0,
+  "actions": [
+   "CLOSE_NO_FRAUD"
+  ],
+  "sar": false,
+  "summary": "Assessed as legitimate at 95% confidence. Bank risk model scored this transaction 0.54 (an input, discounted per policy since high scores are often legitimate). Customer confirmed making the transaction.",
+  "changed": "Assumed customer confirmation moved fraud_probability from 0.47 to 0.05, changing verdict from uncertain to legitimate."
+ },
+ {
+  "id": "HHG-006",
+  "verdict": "fraud",
+  "probability": 0.98,
+  "pattern": "card_not_present_new_device",
+  "exposure": 482.12,
+  "actions": [
+   "BLOCK_CARD",
+   "CREATE_CASE"
+  ],
+  "sar": false,
+  "summary": "Assessed as card not present new device at 98% confidence. Customer proactively reported the transaction: \"Customer C07297 message: 'I never made this $482.12 purchase. Please check my card.' Refers to 3476682.\". Amount is a 2.9-sigma outlier vs. this customer's history; 8 transactions on this card within 48 hours; from a device profile marked New for this account. Exposure $482.12 across 1 transaction(s).",
+  "changed": "nothing"
+ },
+ {
+  "id": "HHG-007",
+  "verdict": "fraud",
+  "probability": 0.92,
+  "pattern": "out_of_region_use",
+  "exposure": 111.92,
+  "actions": [
+   "BLOCK_CARD",
+   "CREATE_CASE"
+  ],
+  "sar": false,
+  "summary": "Assessed as out of region use at 92% confidence. Bank risk model scored this transaction 0.87 (an input, discounted per policy since high scores are often legitimate). Customer denied making the transaction. Case-memory prior adjustment: +0.20 from this card's own closed-case history. Exposure $111.92 across 1 transaction(s).",
+  "changed": "Assumed customer denial moved fraud_probability from 0.64 to 0.92, changing verdict from uncertain to fraud."
+ },
+ {
+  "id": "HHG-008",
+  "verdict": "fraud",
+  "probability": 0.75,
+  "pattern": "card_not_present_new_device",
+  "exposure": 55.68,
+  "actions": [
+   "BLOCK_CARD",
+   "CREATE_CASE"
+  ],
+  "sar": false,
+  "summary": "Assessed as card not present new device at 75% confidence. Customer proactively reported the transaction: \"Customer C13171 message: 'I never made this $55.68 purchase. Please check my card.' Refers to 3558054.\". Case-memory prior adjustment: +0.20 from this card's own closed-case history. No fresh pattern signal fired; classified from this card's historical pattern (card_not_present_new_device). Exposure $55.68 across 1 transaction(s).",
+  "changed": "nothing"
+ },
+ {
+  "id": "HHG-009",
+  "verdict": "fraud",
+  "probability": 0.72,
+  "pattern": "undocumented",
+  "exposure": 30.02,
+  "actions": [
+   "BLOCK_CARD",
+   "CREATE_CASE",
+   "FILE_REPORT",
+   "ESCALATE_TO_ANALYST"
+  ],
+  "sar": true,
+  "summary": "Assessed as undocumented at 72% confidence. Customer proactively reported the transaction: \"Customer C08299 message: 'I never made this $30.02 purchase. Please check my card.' Refers to 3581141.\". Customer denied making the transaction. Exposure $30.02 across 1 transaction(s).",
+  "changed": "Assumed customer denial moved fraud_probability from 0.55 to 0.72, changing verdict from uncertain to fraud."
+ },
+ {
+  "id": "HHG-010",
+  "verdict": "fraud",
+  "probability": 0.75,
+  "pattern": "card_not_present_new_device",
+  "exposure": 1000.03,
+  "actions": [
+   "BLOCK_CARD",
+   "CREATE_CASE",
+   "FILE_REPORT"
+  ],
+  "sar": true,
+  "summary": "Assessed as card not present new device at 75% confidence. Bank risk model scored this transaction 0.90 (an input, discounted per policy since high scores are often legitimate). Amount is a 5.1-sigma outlier vs. this customer's history; from a device profile marked New for this account. Case-memory prior adjustment: -0.15 from this card's own closed-case history. Exposure $1,000.03 across 1 transaction(s).",
+  "changed": "nothing"
+ },
+ {
+  "id": "HHG-011",
+  "verdict": "fraud",
+  "probability": 0.98,
+  "pattern": "card_not_present_new_device",
+  "exposure": 131.3,
+  "actions": [
+   "BLOCK_CARD",
+   "CREATE_CASE",
+   "FILE_REPORT",
+   "MONITOR_CONNECTED_CARDS"
+  ],
+  "sar": true,
+  "summary": "Assessed as card not present new device at 98% confidence. Customer proactively reported the transaction: \"Customer C11923 message: 'I never made this $131.30 purchase. Please check my card.' Refers to 3583368.\". Amount is a 2.5-sigma outlier vs. this customer's history; 84 transactions on this card within 48 hours; from a device profile marked New for this account. 3 other card(s) share this transaction's device profile. Exposure $131.30 across 1 transaction(s).",
+  "changed": "nothing"
+ },
+ {
+  "id": "HHG-012",
+  "verdict": "legitimate",
+  "probability": 0.05,
+  "pattern": "none",
+  "exposure": 0.0,
+  "actions": [
+   "CLOSE_NO_FRAUD"
+  ],
+  "sar": false,
+  "summary": "Assessed as legitimate at 95% confidence. Bank risk model scored this transaction 0.55 (an input, discounted per policy since high scores are often legitimate). Customer confirmed making the transaction.",
+  "changed": "Assumed customer confirmation moved fraud_probability from 0.48 to 0.05, changing verdict from uncertain to legitimate."
+ },
+ {
+  "id": "HHG-013",
+  "verdict": "fraud",
+  "probability": 0.92,
+  "pattern": "account_takeover",
+  "exposure": 35.66,
+  "actions": [
+   "BLOCK_CARD",
+   "CREATE_CASE"
+  ],
+  "sar": false,
+  "summary": "Assessed as account takeover at 92% confidence. Bank risk model scored this transaction 0.76 (an input, discounted per policy since high scores are often legitimate). Customer denied making the transaction. Case-memory prior adjustment: +0.20 from this card's own closed-case history. Exposure $35.66 across 1 transaction(s).",
+  "changed": "Assumed customer denial moved fraud_probability from 0.58 to 0.92, changing verdict from uncertain to fraud."
+ },
+ {
+  "id": "HHG-014",
+  "verdict": "fraud",
+  "probability": 0.75,
+  "pattern": "undocumented",
+  "exposure": 74.96,
+  "actions": [
+   "BLOCK_CARD",
+   "CREATE_CASE",
+   "FILE_REPORT",
+   "MONITOR_CONNECTED_CARDS",
+   "ESCALATE_TO_ANALYST"
+  ],
+  "sar": true,
+  "summary": "Assessed as undocumented at 75% confidence. Analyst request: \"Analyst request: several cards this month show purchases from the same unusual device profile. Review transaction 3478561 on card C13487-K1 and look for related activity.\". 34 other card(s) share this transaction's device profile. Analyst corroborated the shared-device ring. Exposure $74.96 across 1 transaction(s).",
+  "changed": "Analyst corroboration of the shared-device ring moved the verdict to fraud."
+ },
+ {
+  "id": "HHG-015",
+  "verdict": "fraud",
+  "probability": 0.98,
+  "pattern": "card_not_present_new_device",
+  "exposure": 599.94,
+  "actions": [
+   "BLOCK_CARD",
+   "CREATE_CASE",
+   "FILE_REPORT",
+   "MONITOR_CONNECTED_CARDS"
+  ],
+  "sar": true,
+  "summary": "Assessed as card not present new device at 98% confidence. Bank risk model scored this transaction 0.77 (an input, discounted per policy since high scores are often legitimate). Amount is a 3.6-sigma outlier vs. this customer's history; 5 transactions on this card within 48 hours; from a device profile marked New for this account. New device profile plus a spending anomaly, on a customer whose history is 23% in-person -- inconsistent with the usual pattern. Exposure $599.94 across 1 transaction(s).",
+  "changed": "nothing"
+ },
+ {
+  "id": "HHG-016",
+  "verdict": "fraud",
+  "probability": 0.72,
+  "pattern": "undocumented",
+  "exposure": 59.67,
+  "actions": [
+   "BLOCK_CARD",
+   "CREATE_CASE",
+   "FILE_REPORT",
+   "ESCALATE_TO_ANALYST"
+  ],
+  "sar": true,
+  "summary": "Assessed as undocumented at 72% confidence. Customer proactively reported the transaction: \"Customer C09988 message: 'I never made this $59.67 purchase. Please check my card.' Refers to 3534820.\". Customer denied making the transaction. Exposure $59.67 across 1 transaction(s).",
+  "changed": "Assumed customer denial moved fraud_probability from 0.55 to 0.72, changing verdict from uncertain to fraud."
+ },
+ {
+  "id": "HHG-017",
+  "verdict": "legitimate",
+  "probability": 0.05,
+  "pattern": "none",
+  "exposure": 0.0,
+  "actions": [
+   "CLOSE_NO_FRAUD"
+  ],
+  "sar": false,
+  "summary": "Assessed as legitimate at 95% confidence. Bank risk model scored this transaction 0.57 (an input, discounted per policy since high scores are often legitimate). Customer confirmed making the transaction.",
+  "changed": "Assumed customer confirmation moved fraud_probability from 0.13 to 0.05, changing verdict from legitimate to legitimate."
+ },
+ {
+  "id": "HHG-018",
+  "verdict": "fraud",
+  "probability": 0.75,
+  "pattern": "account_takeover",
+  "exposure": 39.08,
+  "actions": [
+   "BLOCK_CARD",
+   "CREATE_CASE"
+  ],
+  "sar": false,
+  "summary": "Assessed as account takeover at 75% confidence. Customer proactively reported the transaction: \"Customer C02354 message: 'I never made this $39.08 purchase. Please check my card.' Refers to 3491361.\". Case-memory prior adjustment: +0.20 from this card's own closed-case history. No fresh pattern signal fired; classified from this card's historical pattern (account_takeover). Exposure $39.08 across 1 transaction(s).",
+  "changed": "nothing"
+ },
+ {
+  "id": "HHG-019",
+  "verdict": "fraud",
+  "probability": 0.95,
+  "pattern": "out_of_region_use",
+  "exposure": 99.92,
+  "actions": [
+   "BLOCK_CARD",
+   "CREATE_CASE",
+   "FILE_REPORT",
+   "MONITOR_CONNECTED_CARDS"
+  ],
+  "sar": true,
+  "summary": "Assessed as out of region use at 95% confidence. Bank risk model scored this transaction 0.90 (an input, discounted per policy since high scores are often legitimate). 4 other card(s) share this transaction's device profile. Case-memory prior adjustment: +0.20 from this card's own closed-case history. Exposure $99.92 across 1 transaction(s).",
+  "changed": "nothing"
+ },
+ {
+  "id": "HHG-020",
+  "verdict": "fraud",
+  "probability": 0.96,
+  "pattern": "card_not_present_new_device",
+  "exposure": 125.08,
+  "actions": [
+   "BLOCK_CARD",
+   "CREATE_CASE"
+  ],
+  "sar": false,
+  "summary": "Assessed as card not present new device at 96% confidence. Bank risk model scored this transaction 0.52 (an input, discounted per policy since high scores are often legitimate). Product R never used before by this customer; 5 transactions on this card within 48 hours; from a device profile marked New for this account. Case-memory prior adjustment: +0.20 from this card's own closed-case history. Exposure $125.08 across 1 transaction(s).",
+  "changed": "nothing"
+ }
+]
